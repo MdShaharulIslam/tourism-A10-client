@@ -3,13 +3,11 @@ import logo from '/public/logo.png';
 import userp from '/public/user.png';
 import { AuthContext } from "../provider/AuthProvider";
 import { useContext } from "react";
-import { getAuth, updateProfile } from "firebase/auth";
+
 
 
 const Navber = () => {
   const { user, logOut } = useContext(AuthContext);
-  const auth = getAuth();
-
   const handleSignOut = () => {
     logOut()
       .then()
@@ -31,65 +29,46 @@ const Navber = () => {
       </li>
       <li>
         <NavLink
-          to="/about"
+          exact
+          to="/allTouristSpot"
           activeClassName=""
           className={`hover:text-yellow-200 ${activeClasses}`}
         >
-          About
-        </NavLink>
-      </li>
-          <li>
-        <NavLink
-          to="/contact"
-          activeClassName=""
-          className={`hover:text-yellow-200 ${activeClasses}`}
-        >
-         ContactUs
+          All Tourists Spot
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/updateProfile"
+          exact
+          to="/addTouristSpot"
           activeClassName=""
           className={`hover:text-yellow-200 ${activeClasses}`}
         >
-          Update Profile
+          Add Tourists Spot
         </NavLink>
       </li>
       <li>
         <NavLink
-          to="/blogPost"
+          exact
+          to="/myList"
           activeClassName=""
           className={`hover:text-yellow-200 ${activeClasses}`}
         >
-        Gallary
+          My List
         </NavLink>
       </li>
+              
     </>
   );
 
-  const update = e => {
-       e.preventDefault();
-    const photourl = e.target.photourl.value;
-     updateProfile(auth.currentUser, {
-          
-      photoURL: photourl
-    })
-    
-      .then(() => {
-        console.log('Profile photo updated successfully');
-      })
-      .catch((error) => {
-        console.error('Error updating profile photo:', error);
-      });
-      };
+  
 
   return (
 
-    <div className="navbar bg-purple-400 rounded-lg my-6 ">
+    <div className="navbar bg-[#00ffa6] rounded-lg my-6 ">
       
       <div className="navbar-start">
-        <div className="w-20 rounded-full hidden lg:flex items-center text-black font-extrabold   "><img src={logo} alt="#" />Buy,Sell & Rent</div>
+        <div className="w-24 rounded-full hidden lg:flex items-center text-black font-extrabold   "><img src={logo} alt="#" /></div>
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
