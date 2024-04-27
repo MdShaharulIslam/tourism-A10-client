@@ -10,10 +10,11 @@ const Navbar = () => {
 
   // update state on toggle
   const handleToggle = e => {
+   
     if (e.target.checked) {
-      setTheme('synthwave');
-    } else {
       setTheme('dark');
+    } else {
+      setTheme('light');
     }
   };
   useEffect(() => {

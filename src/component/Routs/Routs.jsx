@@ -10,6 +10,8 @@ import MyList from "../Mylist/MyList";
 import AddTouristSpot from "../addTouristSpot/AddTouristSpot";
 import PrivateRoute from "./PrivetRout";
 import Footer from "../Footer/Footer";
+import AddedCard from "../AddedCard/AddedCard";
+
 
 
 
@@ -23,7 +25,6 @@ const router = createBrowserRouter([
       {
         path: "/",
         element:<Home></Home>
-       
       },
       {
         path: "/login",
@@ -45,12 +46,20 @@ const router = createBrowserRouter([
       },
       {
         path: "/myList",
-        element:<PrivateRoute><MyList></MyList></PrivateRoute>
+        element:<PrivateRoute><MyList></MyList></PrivateRoute>,    
+         loader: () => fetch('http://localhost:5000/tourism')
+       
          
       },
       {
         path: "/footer",
         element:<Footer></Footer>
+         
+      },
+      {
+        path: "/addedCars",
+        element:<AddedCard></AddedCard>
+   
          
       }
 

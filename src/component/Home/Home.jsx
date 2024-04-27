@@ -5,7 +5,9 @@ import Navber from "../Navber/Navber";
 import Footer from "../Footer/Footer";
 
 
+
 const Home = () => {
+   
     return (
         <div>
         <Helmet><title>Home</title></Helmet>
@@ -19,10 +21,10 @@ const Home = () => {
             
                
             </div>
-         
+       
                
          
-           
+        
         </div>
         <div className="w-full flex"> </div>
          <Footer></Footer>
