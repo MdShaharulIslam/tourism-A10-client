@@ -9,6 +9,7 @@ import AllTouristsSpot from "../All Tourists Spot/AllTouristsSpot";
 import MyList from "../Mylist/MyList";
 import AddTouristSpot from "../addTouristSpot/AddTouristSpot";
 import PrivateRoute from "./PrivetRout";
+import Footer from "../Footer/Footer";
 
 
 
@@ -45,6 +46,11 @@ const router = createBrowserRouter([
       {
         path: "/myList",
         element:<PrivateRoute><MyList></MyList></PrivateRoute>
+         
+      },
+      {
+        path: "/footer",
+        element:<Footer></Footer>
          
       }
 

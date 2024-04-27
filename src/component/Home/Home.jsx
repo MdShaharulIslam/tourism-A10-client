@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 
 import Banner from "../Banner/Banner";
 import Navber from "../Navber/Navber";
+import Footer from "../Footer/Footer";
 
 
 const Home = () => {
@@ -17,14 +18,14 @@ const Home = () => {
             <div className="grid grid-cols-1 justify-center items-center md:grid-cols-2 lg:grid-cols-3 my-6 ">
             
                
-               
             </div>
-          
+         
+               
          
            
         </div>
         <div className="w-full flex"> </div>
-        
+         <Footer></Footer>
        </div>
     );
 };
