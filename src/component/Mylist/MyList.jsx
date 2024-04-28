@@ -10,7 +10,7 @@ const MyList = () => {
              <div className="mx-8">
              <Navber></Navber>
             </div>
-            <h1>my list: {tourisms.length}</h1>
+            <h1 className="text-center text-4xl text-[#00ffa6]">Your list </h1>
 
             <div className="grid grid-cols-1 justify-center items-center md:grid-cols-2 lg:grid-cols-3 my-6 ">
             {tourisms.map(tourism => <AddedCard key={tourism.id } tourism={tourism}></AddedCard>)}

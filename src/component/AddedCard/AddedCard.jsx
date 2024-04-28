@@ -11,10 +11,10 @@ const AddedCard = ({ tourism }) => {
     email,
     spotName,
     countryName,
-    seasonality,
+    seassonality,
     location,
-    description,
-    averageCost,
+    discription,
+    avarageCost,
     travelTime,
     totalVisitorPerYear,
     photoUrl
@@ -35,9 +35,9 @@ const AddedCard = ({ tourism }) => {
           <h2 data-aos="fade-down-right" className="card-title font-bold text-3xl">{countryName}</h2>
           <p>{spotName}</p>
           <p>Location: {location}</p>
-          <p>Description: {description}</p>
-          <p>Seasonality: {seasonality}</p>
-          <p>Average Cost: {averageCost}</p>
+          <p>Description: {discription}</p>
+          <p>Seasonality: {seassonality}</p>
+          <p>Average Cost: {avarageCost}</p>
           <p>Travel Time: {travelTime}</p>
           <p>Total Visitors Per Year: {totalVisitorPerYear}</p>
           <p>User: {userName} ({email})</p>
@@ -56,10 +56,10 @@ AddedCard.propTypes = {
     email: PropTypes.string.isRequired,
     spotName: PropTypes.string.isRequired,
     countryName: PropTypes.string.isRequired,
-    seasonality: PropTypes.string.isRequired,
+    seassonality: PropTypes.string.isRequired,
     location: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    averageCost: PropTypes.number.isRequired,
+    discription: PropTypes.string.isRequired,
+    avarageCost: PropTypes.number.isRequired,
     travelTime: PropTypes.string.isRequired,
     totalVisitorPerYear: PropTypes.number.isRequired,
     photoUrl: PropTypes.string.isRequired

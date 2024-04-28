@@ -40,8 +40,8 @@ const router = createBrowserRouter([
       },
       {
         path: "/addTouristSpot",
-        element: <PrivateRoute> <AddTouristSpot></AddTouristSpot></PrivateRoute>
-        
+        element: <PrivateRoute> <AddTouristSpot></AddTouristSpot></PrivateRoute>,
+        loader: () => fetch('http://localhost:5000/homeData')
        
       },
       {
