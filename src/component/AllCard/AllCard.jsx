@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-const HomeCard = ({ tourism }) => {
+const AllCard = ({ tourism }) => {
     if (!tourism) {
         return <div>Error: Tourism data is missing.</div>;
     }
@@ -12,7 +12,8 @@ const HomeCard = ({ tourism }) => {
         location,
         travelTime,
         photoUrl,
-        _id
+        _id,
+        avarageCost // Corrected the variable name
     } = tourism;
 
     return (
@@ -31,6 +32,7 @@ const HomeCard = ({ tourism }) => {
                     <p>{spotName}</p>
                     <p>Location: {location}</p>
                     <p>Travel Time: {travelTime}</p>
+                    <p>Travel Time: {avarageCost}</p> {/* Corrected the variable name */}
                     <div className="card-actions justify-start">
                         <Link to={`/details/${_id}`}><button className="btn bg-[#00ffa6]">View Property</button></Link>
                     </div>
@@ -40,15 +42,16 @@ const HomeCard = ({ tourism }) => {
     );
 };
 
-HomeCard.propTypes = {
+AllCard.propTypes = {
     tourism: PropTypes.shape({
         spotName: PropTypes.string.isRequired,
         countryName: PropTypes.string.isRequired,
         location: PropTypes.string.isRequired,
         travelTime: PropTypes.string.isRequired,
         photoUrl: PropTypes.string.isRequired,
-        _id: PropTypes.string.isRequired
+        _id: PropTypes.string.isRequired,
+        avarageCost: PropTypes.number.isRequired // Added prop type for averageCost
     }).isRequired
 };
 
-export default HomeCard;
+export default AllCard;

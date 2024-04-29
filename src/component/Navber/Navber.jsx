@@ -86,6 +86,16 @@ const Navbar = () => {
           About
         </NavLink>
       </li>
+      <li>
+        <NavLink
+          exact
+          to="/contact"
+          activeClassName=""
+          className={`hover:text-yellow-200 ${activeClasses}`}
+        >
+         Contact
+        </NavLink>
+      </li>
     </>
   );
 

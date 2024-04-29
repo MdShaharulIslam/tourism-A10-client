@@ -14,7 +14,7 @@ const Banner = () => {
             <a href="#slide5" className="btn btn-circle">❮</a> 
             <a href="#slide2" className="btn btn-circle">❯</a>
             <div className="max-w-md justify-start absolute">
-              <h1 className="-mt-20 ml-20 text-5xl font-bold text-[#00ffa6] animate__animated animate__fadeInLeft">Hello.. <br /><span>We are Providing best Services</span> </h1>
+              <h1 className="-mt-20 ml-20 text-2xl md:text-4xl lg:text-5xl font-bold text-[#00ffa6] animate__animated animate__fadeInLeft">Hello.. <br /><span>We are Providing best Services</span> </h1>
               <button className="btn btn-outline bg-[#00ffa6] mt-28 ml-20">Explore</button>
             </div>
           </div>
@@ -25,7 +25,7 @@ const Banner = () => {
             <a href="#slide1" className="btn btn-circle">❮</a> 
             <a href="#slide3" className="btn btn-circle">❯</a>
             <div className="max-w-md justify-start absolute">
-              <h1 className="-mt-20 ml-20 text-5xl font-bold text-[#00ffa6]">Hello.. <br /><span>We are Providing best Services</span> </h1>
+              <h1 className="-mt-20 ml-20 text-2xl md:text-4xl lg:text-5xl font-bold text-[#00ffa6]">Hello.. <br /><span>We are Providing best Services</span> </h1>
               <button className="btn btn-outline bg-[#00ffa6] mt-28 ml-20">Explore</button>
             </div>
           </div>
@@ -36,7 +36,7 @@ const Banner = () => {
             <a href="#slide2" className="btn btn-circle">❮</a> 
             <a href="#slide4" className="btn btn-circle">❯</a>
             <div className="max-w-md justify-start absolute">
-              <h1 className="-mt-20 ml-20 text-5xl font-bold text-[#00ffa6]">Hello.. <br /><span>We are Providing best Services</span> </h1>
+              <h1 className="-mt-20 ml-20 text-2xl md:text-4xl lg:text-5xl font-bold text-[#00ffa6]">Hello.. <br /><span>We are Providing best Services</span> </h1>
               <button className="btn btn-outline bg-[#00ffa6] mt-28 ml-20">Explore</button>
             </div>
           </div>
@@ -47,7 +47,7 @@ const Banner = () => {
             <a href="#slide3" className="btn btn-circle">❮</a> 
             <a href="#slide5" className="btn btn-circle">❯</a>
             <div className="max-w-md justify-start absolute">
-              <h1 className="-mt-20 ml-20 text-5xl font-bold text-[#00ffa6]">Hello.. <br /><span>We are Providing best Services</span> </h1>
+              <h1 className="-mt-20 ml-20 text-2xl md:text-4xl lg:text-5xl font-bold text-[#00ffa6]">Hello.. <br /><span>We are Providing best Services</span> </h1>
               <button className="btn btn-outline bg-[#00ffa6] mt-28 ml-20">Explore</button>
             </div>
           </div>
@@ -58,7 +58,7 @@ const Banner = () => {
             <a href="#slide4" className="btn btn-circle">❮</a> 
             <a href="#slide1" className="btn btn-circle">❯</a>
             <div className="max-w-md justify-start absolute">
-              <h1 className="-mt-20 ml-20 text-5xl font-bold text-[#00ffa6]">Hello.. <br /><span>We are Providing best Services</span> </h1>
+              <h1 className="-mt-20 ml-20 text-2xl md:text-4xl lg:text-5xl font-bold text-[#00ffa6]">Hello.. <br /><span>We are Providing best Services</span> </h1>
               <button className="btn btn-outline bg-[#00ffa6] mt-28 ml-20">Explore</button>
             </div>
           </div>

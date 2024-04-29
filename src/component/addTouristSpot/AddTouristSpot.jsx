@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import Navber from "../Navber/Navber";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { Helmet } from "react-helmet";
 
 const AddTouristSpot = () => {
     const [user, setUser] = useState(null);
@@ -150,6 +151,7 @@ const AddTouristSpot = () => {
     return (
         <div>
             <div className="mx-8">
+                <Helmet>Added</Helmet>
                 <Navber />
             </div>
             <div className="p-10">

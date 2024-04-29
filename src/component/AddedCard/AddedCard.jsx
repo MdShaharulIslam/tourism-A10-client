@@ -1,6 +1,22 @@
 import PropTypes from 'prop-types';
 
-const AddedCard = ({ tourism }) => {
+const AddedCard = ({ tourism, setTourisms }) => {
+  
+  const handleDelete = (_id) => {
+    fetch(`http://localhost:5000/tourism/${_id}`, {
+        method: "DELETE"
+    })
+        .then(res => {
+            if (!res.ok) {
+                throw new Error('Failed to delete item');
+            }
+            // Update the list after deletion
+            setTourisms(prevTourisms => prevTourisms.filter(tourism => tourism._id !== _id));
+        })
+        .catch(error => {
+            console.error('Error deleting item:', error);
+        });
+};
   if (!tourism) {
     // Handle case where tourism object is not provided
     return <div>Error: Tourism data is missing.</div>;
@@ -43,6 +59,7 @@ const AddedCard = ({ tourism }) => {
           <p>User: {userName} ({email})</p>
           <div className="card-actions justify-start">
           <button className="btn bg-[#00ffa6]">View Property</button>
+          <button onClick={handleDelete}>Delete</button>
           </div>
         </div>
       </div>
@@ -63,7 +80,8 @@ AddedCard.propTypes = {
     travelTime: PropTypes.string.isRequired,
     totalVisitorPerYear: PropTypes.number.isRequired,
     photoUrl: PropTypes.string.isRequired
-  }).isRequired
+  }).isRequired,
+  setTourisms: PropTypes.func.isRequired // Ensure setTourisms is passed as a prop
 };
 
 export default AddedCard;
