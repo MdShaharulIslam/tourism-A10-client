@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Helmet } from "react-helmet";
 import Navber from "../Navber/Navber";
 import { useLoaderData } from "react-router-dom";
@@ -14,9 +14,9 @@ const AllTouristsSpot = () => {
 
     const sortedTourisms = () => {
         if (sortBy === "asc") {
-            return [...tourisms].sort((a, b) => a.average_cost - b.average_cost);
+            return [...tourisms].sort((a, b) => a.avarageCost - b.avarageCost);
         } else if (sortBy === "desc") {
-            return [...tourisms].sort((a, b) => b.average_cost - a.average_cost);
+            return [...tourisms].sort((a, b) => b.avarageCost - a.avarageCost);
         } else {
             return tourisms;
         }
