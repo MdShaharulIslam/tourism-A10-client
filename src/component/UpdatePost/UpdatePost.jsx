@@ -38,7 +38,7 @@ const UpdatePost = () => {
 
         console.log(updatePost); // Debug: Log the updatePost object
 
-        fetch(`http://localhost:5000/tourism/${_id}`, {
+        fetch(`https://tourism-a10-server-gold.vercel.app/tourism/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

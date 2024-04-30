@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const AddedCard = ({ tourism, setTourisms }) => {
   
   const handleDelete = (_id) => {
-    fetch(`http://localhost:5000/tourism/${_id}`, {
+    fetch(`https://tourism-a10-server-gold.vercel.app/tourism/${_id}`, {
         method: "DELETE"
     })
         .then(res => {

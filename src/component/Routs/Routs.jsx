@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element:<Home></Home>  ,
-        loader: () => fetch('http://localhost:5000/tourism')
+        loader: () => fetch('https://tourism-a10-server-gold.vercel.app/tourism')
       },
       {
         path: "/login",
@@ -52,7 +52,7 @@ const router = createBrowserRouter([
       {
         path: "/allTouristSpot",
         element: <AllTouristsSpot></AllTouristsSpot>
-       , loader: () => fetch('http://localhost:5000/tourism')
+       , loader: () => fetch('https://tourism-a10-server-gold.vercel.app/tourism')
       },
       {
         path: "/addTouristSpot",
@@ -62,7 +62,7 @@ const router = createBrowserRouter([
       {
         path: "/myList",
         element:<PrivateRoute><MyList></MyList></PrivateRoute>,    
-         loader: () => fetch('http://localhost:5000/tourism')
+         loader: () => fetch('https://tourism-a10-server-gold.vercel.app/tourism')
        
          
       },
@@ -80,7 +80,7 @@ const router = createBrowserRouter([
       {
         path: "/updatepost/:id",
         element:<UpdatePost></UpdatePost>,
-        loader: ({params}) => fetch(`http://localhost:5000/tourism/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-a10-server-gold.vercel.app/tourism/${params.id}`)
    
          
       },
@@ -90,7 +90,7 @@ const router = createBrowserRouter([
             <HomeCDetails ></HomeCDetails>
           </PrivateRoute>),
          
-                loader: () => fetch('http://localhost:5000/tourism')
+                loader: () => fetch('https://tourism-a10-server-gold.vercel.app/tourism')
       }
 
     ],
