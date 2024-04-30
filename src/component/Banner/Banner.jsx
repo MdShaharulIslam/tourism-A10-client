@@ -3,7 +3,7 @@ import slide2 from '/s2.jpg';
 import slide3 from '/s3.jpg';
 import slide4 from '/s4.jpg';
 import slide5 from '/s5.jpg';
-
+import { Typewriter } from 'react-simple-typewriter'
 const Banner = () => {
   return (
     <div>
@@ -14,7 +14,20 @@ const Banner = () => {
             <a href="#slide5" className="btn btn-circle">❮</a> 
             <a href="#slide2" className="btn btn-circle">❯</a>
             <div className="max-w-md justify-start absolute">
-              <h1 className="-mt-20 ml-20 text-2xl md:text-4xl lg:text-5xl font-bold text-[#00ffa6] animate__animated animate__fadeInLeft">Hello.. <br /><span>We are Providing best Services</span> </h1>
+            <div className='App text-2xl md:text-4xl lg:text-5xl font-bold text-[#00ffa6] -mt-20 ml-20'>
+      <Typewriter  
+      words={['Hello..', 'We are', 'Providing ','best','Services']}
+            loop={5}
+            cursor
+            cursorStyle='_'
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1000}
+           
+             />
+          
+    </div>
+            
               <button className="btn btn-outline bg-[#00ffa6] mt-28 ml-20">Explore</button>
             </div>
           </div>

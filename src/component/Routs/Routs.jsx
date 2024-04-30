@@ -15,6 +15,7 @@ import HomeCDetails from "../HomeCardDetails/HomeCDetails";
 import About from "../About/About";
 import ContactForm from "../Contact/Contact";
 import ContactMap from "../ContactMap/ContactMap";
+import UpdatePost from "../UpdatePost/UpdatePost";
 
 
 
@@ -73,6 +74,13 @@ const router = createBrowserRouter([
       {
         path: "/addedCars",
         element:<AddedCard></AddedCard>
+   
+         
+      },
+      {
+        path: "/updatepost/:id",
+        element:<UpdatePost></UpdatePost>,
+        loader: ({params}) => fetch(`http://localhost:5000/tourism/${params.id}`)
    
          
       },
