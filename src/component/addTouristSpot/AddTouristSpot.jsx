@@ -3,13 +3,11 @@ import Swal from "sweetalert2";
 import Navber from "../Navber/Navber";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { Helmet } from "react-helmet";
-
 const AddTouristSpot = () => {
     const [user, setUser] = useState(null);
     const [selectedCountry, setSelectedCountry] = useState("");
     const [availableSpots, setAvailableSpots] = useState([]);
-
-    // Fetch currently authenticated user
+   
     useEffect(() => {
         const auth = getAuth();
         const unsubscribe = onAuthStateChanged(auth, (user) => {
@@ -24,7 +22,7 @@ const AddTouristSpot = () => {
         return () => unsubscribe();
     }, []);
 
-    // Function to handle country selection
+    
     const handleCountryChange = (e) => {
         setSelectedCountry(e.target.value);
         // Set available spots based on the selected country
