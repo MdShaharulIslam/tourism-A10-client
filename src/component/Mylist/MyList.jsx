@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from "react";
+import  { useState, useEffect, useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import Navber from "../Navber/Navber";
 import AddedCard from "../AddedCard/AddedCard";
@@ -19,7 +19,7 @@ const MyList = () => {
     useEffect(() => {
         const fetchUserTourisms = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/tourism?userEmail=${userEmail}`);
+                const response = await fetch(`https://tourisms.vercel.app/tourism?userEmail=${userEmail}`);
                 if (response.ok) {
                     const data = await response.json();
                     setTourisms(data);
