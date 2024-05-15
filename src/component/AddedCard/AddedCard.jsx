@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const AddedCard = ({ tourism, setTourisms }) => {
   
   const handleDelete = (_id) => {
-    fetch(`https://tourism-a10-server-gold.vercel.app/tourism/${_id}`, {
+    fetch(`http://localhost:5000/tourism/${_id}`, {
         method: "DELETE"
     })
         .then(res => {
@@ -52,7 +52,7 @@ const AddedCard = ({ tourism, setTourisms }) => {
       <td>
       <div className="card-actions grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3">
             <Link
-             to={`/detailsPage/${_id}`}><button className="btn bg-[#00ffa6]">View Details</button></Link>
+             to={'/allTouristSpot'}><button className="btn bg-[#00ffa6]">View Details</button></Link>
             <Link to={`/UpdatePost/${_id}`}><button className="btn bg-[#00ffa6]">Update Spot</button></Link>
             <Link ><button onClick ={()=>handleDelete(_id)}className="btn bg-[#00ffa6]">Delete Spot</button></Link>
             </div>

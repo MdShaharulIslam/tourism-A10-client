@@ -1,17 +1,50 @@
-import { useLoaderData } from "react-router-dom";
+import React, { useState, useEffect, useContext } from "react";
+import { AuthContext } from "../provider/AuthProvider";
 import Navber from "../Navber/Navber";
 import AddedCard from "../AddedCard/AddedCard";
 
 const MyList = () => {
-    const tourisms = useLoaderData();
+    const { user } = useContext(AuthContext); // Access user data from the AuthContext
+    const [userEmail, setUserEmail] = useState(""); // State to store user email
+    const [tourisms, setTourisms] = useState([]);
 
+    // Fetch user's data based on user email
+    useEffect(() => {
+        if (user) {
+            setUserEmail(user.email); // Set user email from the context
+        }
+    }, [user]);
+
+    // Fetch tourisms based on userEmail
+    useEffect(() => {
+        const fetchUserTourisms = async () => {
+            try {
+                const response = await fetch(`http://localhost:5000/tourism?userEmail=${userEmail}`);
+                if (response.ok) {
+                    const data = await response.json();
+                    setTourisms(data);
+                } else {
+                    console.error('Failed to fetch user');
+                }
+            } catch (error) {
+                console.error('Error fetching user', error);
+            }
+        };
+
+        if (userEmail) {
+            fetchUserTourisms();
+        }
+    }, [userEmail]);
+
+    // Function to handle deletion of a tourism item
     const handleDelete = (_id) => {
-        // Implement  delete logic here
+        // Implement delete logic here
         console.log("Delete item with ID:", _id);
     };
 
+    // Function to handle updating of a tourism item
     const handleUpdate = (_id, newData) => {
-        // Implement your update logic here
+        // Implement update logic here
         console.log("Update item with ID:", _id, "New data:", newData);
     };
 
@@ -20,9 +53,8 @@ const MyList = () => {
             <div className="mx-8">
                 <Navber />
             </div>
-            <h1 className="text-center text-4xl text-[#00ffa6]">Your list </h1>
-
-            <div >
+            <h1 className="text-center text-4xl text-[#00ffa6]">Your list</h1>
+            <div>
                 <div className="mx-8 overflow-x-auto">
                     <table className="min-w-full divide-y divide-gray-200">
                         <thead className="bg-gray-50">

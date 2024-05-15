@@ -16,21 +16,20 @@ const UpdatePost = () => {
         const countryName = form.countryName.value;
         const seassonality = form.seassonality.value;
         const location = form.location.value;
-        const description = form.description.value; // Corrected typo: discription -> description
-        const averageCost = form.averageCost.value; // Corrected typo: avarageCost -> averageCost
+        const description = form.description.value; 
+        const averageCost = form.averageCost.value; 
         const travelTime = form.travelTime.value;
         const totalVisitorPerYear = form.totalVisitorsPerYear.value;
         const photoUrl = form.photoUrl.value;
-        const _id = tourism._id; // Retrieve _id from the loaded tourism data
-
+        const _id = tourism._id; 
         const updatePost = {
             _id,
             spotName,
             countryName,
             seassonality,
             location,
-            description, // Corrected typo: discription -> description
-            averageCost, // Corrected typo: avarageCost -> averageCost
+            description, 
+            averageCost, 
             travelTime,
             totalVisitorPerYear,
             photoUrl,
