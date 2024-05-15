@@ -10,12 +10,10 @@ const PrivateRoute = ({ children }) => {
     if (loading) {
         return <span className="loading loading-infinity loading-lg"></span>;
     }
-
     if (user) {
         return children;
     }
-
-    // Redirect to login page with current location as the state
+    
     return <Navigate to="/login" state={{ from: location.pathname }} />;
 };
 
