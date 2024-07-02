@@ -5,7 +5,7 @@ This template provides a minimal setup to get React working in Vite with HMR and
 Currently, two official plugins are available:
 
 
-[Server Side code]( https://github.com/MdShaharulIslam/tourisom-A10-Server)
+# Server side: [Server Side code]( https://github.com/MdShaharulIslam/tourisom-A10-Server) <br/>
 [Visit our website]( https://tourism-a10-client-504d1.web.app)
 # MyTourismApp
 
